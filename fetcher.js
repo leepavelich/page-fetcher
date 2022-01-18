@@ -30,7 +30,6 @@ fs.access(localPath, fs.F_OK, (err) => {
 
   rl.question('File already exists. Do you wish to overwrite? (Y/N) ', answer => {
     if (answer !== 'Y' && answer !== 'y') {
-      console.log(answer, typeof answer, answer !== 'Y', answer !== 'y')
       console.log('File not overwritten. Exiting...')
       rl.close()
       return;
