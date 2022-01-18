@@ -55,7 +55,7 @@ const pullRequest = url => {
     
     fs.writeFile(localPath, body, err => {
       if (err) {
-        console.error(err);
+        console.error('Invalid path; directory does not exist');
         return;
       }
       console.log(`Downloaded and saved ${bytes} bytes to ${localPath}`);
